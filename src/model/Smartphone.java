@@ -1,30 +1,30 @@
 package model;
 
-import interfaces.Camara;
-import interfaces.Reloj;
+import interfaces.Camera;
+import interfaces.Watch;
 
-public class Smartphone extends Telefono implements Camara, Reloj {
+public class Smartphone extends Telephone implements Camera, Watch {
 
-	public Smartphone(String marca, String modelo) {
-		super(marca, modelo);
+	public Smartphone(String brand, String model) {
+		super(brand, model);
 
 	}
 
 	@Override
-	public void alarma() {
-		System.out.println("Esta sonando la alarma!");
+	public void alarm() {
+		System.out.println("The alarm is ringing!");
 	}
 
 	@Override
-	public void fotografiar() {
+	public void shoot() {
 		// TODO Auto-generated method stub
-		System.out.println("Se está haciendo una foto!");
+		System.out.println("Taking a photo!");
 
 	}
 
 	@Override
 	public String toString() {
-		return "Smartphone con Marca = " + getMarca() + ", Modelo = " + getModelo() + ".";
+		return "Smartphone  Brand = " + getBrand() + ", Model = " + getModel() + ".";
 	}
 
 }
